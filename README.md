@@ -1,4 +1,4 @@
-# HKOWeather-API
+# HKOWeather-API [![Build Status](https://travis-ci.org/mob41/HKOWeather-API.svg?branch=master)](https://travis-ci.org/mob41/HKOWeather-API)
 An API for fetching weather from Hong Kong Observatory.
 
 ## Functions
