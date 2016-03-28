@@ -7,7 +7,6 @@ matrix:
   - jdk: oraclejdk8
 
 before_deploy:
-- projectversion=`mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | sed -n -e '/^\[.*\]/ !{ /^[0-9]/ { p; q } }'`
 - echo "Project version: $projectversion"
 - mvn package
 - git config --global user.email "builds@travis-ci.com"
@@ -25,3 +24,6 @@ deploy:
   file: HKOWeather-API-$projectversion.jar
   on:
     tags: false
+    
+env:
+- projectversion=0.0.1-SNAPSHOT
