@@ -21,7 +21,7 @@ public class GetTempTest {
 				+ "\nWeather Station Name in ZH: " + report.getStationNameInZH()
 				+ "\nThe temperature is: " + report.getTemp()
 				+ "\nThe around temperature is: " + report.getTempAround()
-				+ "\nHumidity: " + report.getHumidity() + "%"
+				+ "\nHumidity: " + report.getHumidity()
 				+ "\nWind Direction code: " + report.getWindDirectionCode()
 				+ "\nWind Direction English: " + report.getWindDirectionInEN()
 				+ "\nWind Direction Chinese: " + report.getWindDirectionInZH()
