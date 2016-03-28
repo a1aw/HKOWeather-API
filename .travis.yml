@@ -6,9 +6,6 @@ matrix:
   include:
   - jdk: oraclejdk8
 
-script:
-- gem install travis
-
 before_deploy:
 - travis setup releases
 - git config --global user.email "builds@travis-ci.com"
@@ -21,7 +18,7 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file: "FILE TO UPLOAD"
+  api_key: $GITPERM
+  file: HKOWeather-API-SNAPSHOT-v0.1.$TRAVIS_JOB_ID.jar
   on:
     tags: false
