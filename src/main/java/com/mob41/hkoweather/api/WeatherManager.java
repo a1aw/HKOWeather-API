@@ -17,7 +17,7 @@ import com.mob41.hkoweather.exception.InvaildStationException;
 import com.mob41.hkoweather.thread.WeatherFetchInterval;
 
 /***
- * <h4>WeatherManager</h4>
+ * <h3>WeatherManager</h3>
  * <pre>public class WeatherManager</pre>
  * A weather manager which manages the weather report.<br>
  * Automatically fetching weather report from HKO if specified.
@@ -43,7 +43,7 @@ public class WeatherManager {
 	private WeatherReport report;
 	
 	/***
-	 * <h4>WeatherManager</h4>
+	 * <h3>WeatherManager</h3>
 	 * <pre>public WeatherManager() throws InvaildStationException</pre>
 	 * Create a new weather manager.<br>
 	 * <br>
@@ -55,7 +55,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>WeatherManager</h4>
+	 * <h3>WeatherManager</h3>
 	 * <pre>public WeatherManager(int station) throws InvaildStationException</pre>
 	 * Create a new weather manager.
 	 * @param station - Specify a weather station code's INDEX
@@ -66,7 +66,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>WeatherManager</h4>
+	 * <h3>WeatherManager</h3>
 	 * <pre>public WeatherManager(String station) throws InvaildStationException</pre>
 	 * Create a new weather manager
 	 * @param station - Specify a weather station code, e.g. HKO, WTS
@@ -81,7 +81,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>getWeatherReport</h4>
+	 * <h3>getWeatherReport</h3>
 	 * <pre>public WeatherReport getWeatherReport()</pre>
 	 * Get the weather report of the weather manager.<br>
 	 * You have to call this function: 
@@ -95,7 +95,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>loadReport</h4>
+	 * <h3>loadReport</h3>
 	 * <pre>public void loadReport(WeatherReport report)</pre>
 	 * Load a weather report to the manager.
 	 * @param report A weather report generated or created.
@@ -105,7 +105,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>setFetchInterval</h4>
+	 * <h3>setFetchInterval</h3>
 	 * <pre>public void setFetchInterval(int ms)</pre>
 	 * Set the fetching interval of the weather report.<br>
 	 * To start the interval, remember to call:
@@ -119,7 +119,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>resetFetchInterval</h4>
+	 * <h3>resetFetchInterval</h3>
 	 * <pre>public void resetFetchInterval(int ms)</pre>
 	 * Resets the interval to default interval. (60000 ms)
 	 */
@@ -128,7 +128,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>startFetchInterval</h4>
+	 * <h3>startFetchInterval</h3>
 	 * <pre>public void startFetchInterval()</pre>
 	 * Start fetch interval thread.
 	 */
@@ -140,7 +140,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>stopFetchInterval</h4>
+	 * <h3>stopFetchInterval</h3>
 	 * <pre>public void stopFetchInterval()</pre>
 	 * Stop fetch interval thread.
 	 */
@@ -150,7 +150,7 @@ public class WeatherManager {
 	}
 	
 	/***
-	 * <h4>fetchWeatherReport</h4>
+	 * <h3>fetchWeatherReport</h3>
 	 * <pre>public WeatherReport fetchWeatherReport()</pre>
 	 * Fetch the weather report from Hong Kong Observatory.<br>
 	 * with the weather station specified before.

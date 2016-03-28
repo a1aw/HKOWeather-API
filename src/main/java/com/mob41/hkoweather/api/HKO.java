@@ -24,15 +24,15 @@ import com.sun.syndication.io.SyndFeedInput;
 import com.sun.syndication.io.XmlReader;
 
 
-/**
- * <h4>Hong Kong Observatory Weather RSS Feed API for Java</h4>
- * <p>
+/***
+ * <h3>Hong Kong Observatory Weather RSS Feed API for Java</h3>
+ * <br>
  * HKO doesn't have a open-source API for its weather report.
  * (Except the paid-service of the XML weather system)
- * <p>
+ * <br>
  * This is a API for Java Developers in Hong Kong to get weather
  * reports of HKO.
- * <p>
+ * <br>
  * This API depends on:
  * <br>
  * ROME v1.0, JSoup v1.8.3, JDOM v1.1.3
