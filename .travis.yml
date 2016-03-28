@@ -1,29 +1,29 @@
 language: java
 
-install: true
+install: false
 
 matrix:
   include:
   - jdk: oraclejdk8
 
 before_deploy:
+- projectversion=`mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | sed -n -e '/^\[.*\]/ !{ /^[0-9]/ { p; q } }'`
 - echo $projectversion
 - mvn package
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
-- export GIT_TAG=SNAPSHOT-v0.1.$TRAVIS_JOB_ID
-- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_JOB_ID"
+- export GIT_TAG=$projectversion
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
 - git push -q https://$GITPERM@github.com/mob41/HKOWeather-API --tags
 - ls -R
-- cd target
 
 deploy:
   skip_cleanup: true
   provider: releases
   api_key: $GITPERM
-  file: HKOWeather-API-$projectversion.jar
+  file: target/HKOWeather-API-$projectversion.jar
   on:
     tags: false
     
 env:
-- projectversion=0.0.1-SNAPSHOT
+- projectversion=UNKN-$TRAVIS_BUILD_NUMBER
