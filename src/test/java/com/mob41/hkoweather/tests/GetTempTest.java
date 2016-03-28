@@ -1,11 +1,14 @@
 package com.mob41.hkoweather.tests;
 
+import org.junit.Test;
+
 import com.mob41.hkoweather.api.WeatherManager;
 import com.mob41.hkoweather.api.WeatherReport;
 
 public class GetTempTest {
 
-	public static void main(String[] args) throws Exception {
+	@Test
+	public void test() throws Exception {
 		WeatherManager man = new WeatherManager();
 		man.fetchWeatherReport();
 		WeatherReport report = man.getWeatherReport();
