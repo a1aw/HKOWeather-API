@@ -196,13 +196,30 @@ public class WeatherManager {
 			report.setTempAround(Integer.parseInt(json.getString("Temperature_AroundtoOdd")));
 			report.setHumidity(Integer.parseInt(json.getString("RH")));
 			report.setWindDirectionCode(json.getString("WindDirectionCode"));
+			report.setWindDirection_en(json.getString("WindDirectionEn"));
 			report.setWindDirection_en_shortform(json.getString("WindDirectionShortformEn"));
+			report.setWindDirection_zh(json.getString("WindDirectionZh"));
+			report.setWindDirection_zh_shortform(json.getString("WindDirectionShortformZh"));
+			if (!json.get("WindSpeedKm").equals(null)){
+				report.setWindSpeed(Float.parseFloat(json.getString("WindSpeedKm")));
+			}
+			report.setMeanSeaLevelPressure(Float.parseFloat(json.getString("MeanSeaLevelPressure")));
+			report.setTenMinuteMeanVisibility(Integer.parseInt(json.getString("TenMinuteMeanVisibility")));
+			report.setMaxTemp(Float.parseFloat(json.getString("MaxTemperature")));
+			report.setMaxTempAround(Integer.parseInt(json.getString("MaxTemperature_AroundtoOdd")));
+			report.setMinTemp(Float.parseFloat(json.getString("MinTemperature")));
+			report.setMinTempAround(Integer.parseInt(json.getString("MinTemperature_AroundtoOdd")));
+			report.setHomeMaxTemp(Integer.parseInt(json.getString("HomeMaxTemperature")));
+			report.setHomeMinTemp(Integer.parseInt(json.getString("HomeMinTemperature")));
 			return report;
 		} catch (MalformedURLException e1) {
+			e1.printStackTrace();
 			throw new FetchWeatherException("The specified station code was invalid.");
 		} catch (IOException e1) {
+			e1.printStackTrace();
 			throw new FetchWeatherException("Could not connect to server.");
 		} catch (JSONException e1){
+			e1.printStackTrace();
 			throw new InvaildReportException("The weather report fetched was invalid.");
 		}
 	}
