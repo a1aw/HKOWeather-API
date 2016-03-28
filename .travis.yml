@@ -7,8 +7,6 @@ matrix:
   - jdk: oraclejdk8
 
 before_deploy:
-- mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version
-- projectversion=`mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version`
 - echo $projectversion
 - mvn package
 - git config --global user.email "builds@travis-ci.com"
@@ -27,4 +25,4 @@ deploy:
     tags: false
     
 env:
-- projectversion=UNKN-$TRAVIS_BUILD_NUMBER
+- projectversion=0.0.1-SNAPSHOT
