@@ -199,7 +199,7 @@ public class WeatherReport {
 	/***
 	 * <h3>setWindDirectionCode</h3>
 	 * <pre>setWindDirectionCode(String windDirectionCode)</pre>
-	 * @param windDirectionCode
+	 * @param windDirectionCode Wind Direction Code. e.g. NE / SE, etc...
 	 */
 	protected void setWindDirectionCode(String windDirectionCode){
 		this.windDirectionCode = windDirectionCode;
