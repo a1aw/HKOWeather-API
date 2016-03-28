@@ -2,6 +2,7 @@ package com.mob41.hkoweather.api;
 
 public class WeatherReport {
 	
+	//Data from regional_weather_XXX.xml --START
 	private String stationcode = null;
 	
 	private String stationNameEn = null;
@@ -45,7 +46,9 @@ public class WeatherReport {
 	private int HomeMaxTemperature = 0;
 	
 	private int HomeMinTemperature = 0;
+	//--END
 	
+	//
 	/***
 	 * <h3>WeatherReport</h3>
 	 * <pre>protected WeatherReport(String stationcode)</pre>

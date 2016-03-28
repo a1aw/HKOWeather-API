@@ -1,6 +1,7 @@
 # HKOWeather-API [![Build Status](https://travis-ci.org/mob41/HKOWeather-API.svg?branch=master)](https://travis-ci.org/mob41/HKOWeather-API)
 An API for fetching weather from Hong Kong Observatory.
 
+[https://github.com/mob41/HKOWeather-API/releases/latest](https://github.com/mob41/HKOWeather-API/releases/latest)
 ## Functions
 1. (Deprecated) Get HKO Weather Image, Temperature with just one function.
 2. Get temperature, humidity, wind speed, day 1-7 weather report, etc.
