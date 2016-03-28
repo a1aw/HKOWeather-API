@@ -7,17 +7,21 @@ matrix:
   - jdk: oraclejdk8
 
 before_deploy:
+- mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version
+- echo "Project version: ${project.version}"
+- mvn package
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
 - export GIT_TAG=SNAPSHOT-v0.1.$TRAVIS_JOB_ID
 - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_JOB_ID"
 - git push -q https://$GITPERM@github.com/mob41/HKOWeather-API --tags
 - ls -R
+- cd target
 
 deploy:
   skip_cleanup: true
   provider: releases
   api_key: $GITPERM
-  file: HKOWeather-API-SNAPSHOT-v0.1.$TRAVIS_JOB_ID.jar
+  file: HKOWeather-API-${project.version}.jar
   on:
     tags: false
