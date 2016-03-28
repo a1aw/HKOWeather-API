@@ -197,8 +197,8 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h3></h3>
-	 * <pre></pre>
+	 * <h3>etWindDirectionCode</h3>
+	 * <pre>setWindDirectionCode(String windDirectionCode)</pre>
 	 * @param windDirectionCode
 	 */
 	protected void setWindDirectionCode(String windDirectionCode){
