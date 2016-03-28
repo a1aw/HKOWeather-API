@@ -47,7 +47,7 @@ public class WeatherReport {
 	private int HomeMinTemperature = 0;
 	
 	/***
-	 * <h4>WeatherReport</h4>
+	 * <h3>WeatherReport</h3>
 	 * <pre>protected WeatherReport(String stationcode)</pre>
 	 * Create a new weather report.
 	 * @param stationcode - To classify this weather report to a specific Weather Station.
@@ -57,7 +57,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>setStationCode</h4>
+	 * <h3>setStationCode</h3>
 	 * <pre>protected void setStationCode(String stationcode)</pre>
 	 * Set the weather station code of this report
 	 * @param stationcode - Weather Station Code. e.g. HKO, WTS..etc
@@ -67,7 +67,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>getStationCode</h4>
+	 * <h3>getStationCode</h3>
 	 * <pre>public String getStationCode()</pre>
 	 * Get the weather station code of this weather report.
 	 * @return A weather station code. e.g. HKO, WTS...etc.
@@ -77,7 +77,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>setStationName_zh</h4>
+	 * <h3>setStationName_zh</h3>
 	 * <pre>protected void setStationName_zh(String name)</pre>
 	 * Set the weather station's Chinese name of this report
 	 * @param name - Weather Station's Chinese name.
@@ -87,7 +87,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>getStationNameInZH</h4>
+	 * <h3>getStationNameInZH</h3>
 	 * <pre>public String getStationNameInZH()</pre>
 	 * Get the weather station's Chinese name of this report
 	 * @return Weather Station's Chinese name.
@@ -97,7 +97,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>setStationName_en</h4>
+	 * <h3>setStationName_en</h3>
 	 * <pre>protected void setStationName_en(String name)</pre>
 	 * Set the weather station's English name of this report
 	 * @param name - Weather Station's English name.
@@ -107,7 +107,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>getStationNameInEN</h4>
+	 * <h3>getStationNameInEN</h3>
 	 * <pre>public String getStationNameInEN()</pre>
 	 * Get the weather staiton's English name of this report
 	 * @return Weather Station's English name.
@@ -117,7 +117,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>setUpdateTime</h4>
+	 * <h3>setUpdateTime</h3>
 	 * <pre>public void setUpdateTime(String time)</pre>
 	 * Set the update time of the weather of this report. (Provided by HKO)
 	 * @param time - Time described in String.
@@ -127,7 +127,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>getUpdateTime</h4>
+	 * <h3>getUpdateTime</h3>
 	 * <pre>public String getUpdateTime()</pre>
 	 * Get the update time of the weather of this report (Provided by HKO)
 	 * @return Time described in String.
@@ -137,7 +137,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>setTemp</h4>
+	 * <h3>setTemp</h3>
 	 * <pre>protected void setTemp(float temp)</pre>
 	 * Set the temperature of the weather of this report.
 	 * @param temp - Float number of the temperature.
@@ -147,7 +147,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>getTemp</h4>
+	 * <h3>getTemp</h3>
 	 * <pre>public float getTemp()</pre>
 	 * Get the temperature of the weather of this report.
 	 * @return Float number of the temperature
@@ -157,7 +157,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>setTempAround</h4>
+	 * <h3>setTempAround</h3>
 	 * <pre>protected void setTempAround(int temp)</pre>
 	 * Set the temperature around (rounded) of the weather of this report.
 	 * @param temp Integer of the temperature around (rounded) 
@@ -167,7 +167,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>getTempAround</h4>
+	 * <h3>getTempAround</h3>
 	 * <pre>public int getTempAround()</pre>
 	 * Get the temperature around (rounded) of the weather of this report.
 	 * @return Integer of the temperature around (rounded)
@@ -177,7 +177,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>setHumidity</h4>
+	 * <h3>setHumidity</h3>
 	 * <pre>protected void setHumidity(int humidity)</pre>
 	 * Set the humidity of the weather of this report.
 	 * @param humidity Humidity of the weather
@@ -187,7 +187,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4>getHumidity</h4>
+	 * <h3>getHumidity</h3>
 	 * <pre>public int getHumidity()</pre>
 	 * Get the humidity of the weather of this report.
 	 * @return Humidity of the weather of this report.
@@ -197,7 +197,7 @@ public class WeatherReport {
 	}
 	
 	/***
-	 * <h4></h4>
+	 * <h3></h3>
 	 * <pre></pre>
 	 * @param windDirectionCode
 	 */

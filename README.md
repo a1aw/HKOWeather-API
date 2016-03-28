@@ -11,6 +11,7 @@ A javadoc is also uploaded for reference.
 [http://mob41.github.io/HKOWeather-API/javadoc/](http://mob41.github.io/HKOWeather-API/javadoc/)
 
 ## Example
+More examples: [API Tests](https://github.com/mob41/HKOWeather-API/tree/master/src/test/java/com/mob41/hkoweather/tests)
 <pre>
 WeatherManager man = new WeatherManager("HKO");
 man.fetchWeatherReport();
