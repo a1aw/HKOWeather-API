@@ -26,8 +26,8 @@ deploy:
     all_branches: true
     
 branches:
-  except:
-  - /^*-v[0-9]/
+  only:
+    - master
 
 env:
 - projectversion=0.0.1-SNAPSHOT
