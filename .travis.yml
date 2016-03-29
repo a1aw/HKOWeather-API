@@ -8,7 +8,10 @@ before_deploy:
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
 - export GIT_TAG=$projectversion-B$TRAVIS_BUILD_NUMBER
-- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER<br><br> \
+- HKOWeather-API-x.x.x.jar - Simple clean file, but no dependencies.<br>\
+- HKOWeather-API-x.x.x-jar-with-dependencies.jar - with dependencies. (Recommended)<br>\
+- HKOWeather-API-x.x.x-javadoc.jar - JavaDoc File"
 - git push -q https://$GITPERM@github.com/mob41/HKOWeather-API --tags
 - ls -R
 
@@ -16,7 +19,10 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key: $GITPERM
-  file: target/HKOWeather-API-$projectversion.jar
+  file: 
+    - target/HKOWeather-API-$projectversion.jar
+    - target/HKOWeather-API-$projectversion-jar-with-dependencies.jar
+    - target/HKOWeather-API-$projectversion-javadoc.jar
   on:
     tags: false
     all_branches: true
