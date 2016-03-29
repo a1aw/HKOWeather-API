@@ -32,7 +32,7 @@ public class WeatherManager {
 	private static final int defaultLocation = 0;
 	private static final int defaultInterval = 60000;
 	
-	private Thread thread;
+	public Thread thread;
 	
 	private WeatherFetchInterval runnable;
 	
@@ -133,7 +133,7 @@ public class WeatherManager {
 	 * Start fetch interval thread.
 	 */
 	public void startFetchInterval(){
-		runnable = new WeatherFetchInterval(thread, this, fetchInterval);
+		runnable = new WeatherFetchInterval(this, fetchInterval);
 		thread = new Thread(runnable);
 		thread.setName("FetchInterval-" + thread.getId());
 		thread.start();
