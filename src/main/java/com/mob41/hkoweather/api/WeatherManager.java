@@ -151,14 +151,30 @@ public class WeatherManager {
 	
 	/***
 	 * <h3>fetchWeatherReport</h3>
-	 * <pre>public WeatherReport fetchWeatherReport()</pre>
+	 * <pre>public WeatherReport fetchWeatherReport() throws FetchWeatherException, InvaildReportException</pre>
 	 * Fetch the weather report from Hong Kong Observatory.<br>
-	 * with the weather station specified before.
+	 * with the weather station specified before.<br>
+	 * <br>
+	 * Using the report inside the manager.
 	 * @return <b>WeatherReport</b> - with all the weather-related data.
 	 * @throws FetchWeatherException Could not fetch the weather report successfully.
 	 * @throws InvaildReportException The report fetched was invalid.
 	 */
 	public WeatherReport fetchWeatherReport() throws FetchWeatherException, InvaildReportException{
+		return fetchWeatherReport(this.report);
+	}
+	
+	/***
+	 * <h3>fetchWeatherReport</h3>
+	 * <pre>public WeatherReport fetchWeatherReport(WeatherReport report) throws FetchWeatherException, InvaildReportException</pre>
+	 * Fetch the weather report from Hong Kong Observatory.<br>
+	 * with the weather station specified before.
+	 * @param report Specify a weather report to be updated.
+	 * @return <b>WeatherReport</b> - with all the weather-related data.
+	 * @throws FetchWeatherException Could not fetch the weather report successfully.
+	 * @throws InvaildReportException The report fetched was invalid.
+	 */
+	public WeatherReport fetchWeatherReport(WeatherReport report) throws FetchWeatherException, InvaildReportException{
 		URLConnection connection;
 		try {
 			connection = new URL(url + station + fileType).openConnection();
@@ -187,7 +203,7 @@ public class WeatherManager {
 				}
 			}
 			JSONObject json = new JSONObject(sb.toString());
-			report = new WeatherReport(this.station);
+			report = new WeatherReport(this);
 			report.setStationCode(json.getString("StationCode"));
 			report.setStationName_en(json.getString("StationNameEn"));
 			report.setStationName_zh(json.getString("StationNameZh"));

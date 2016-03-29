@@ -1,6 +1,11 @@
 package com.mob41.hkoweather.api;
 
+import com.mob41.hkoweather.exception.FetchWeatherException;
+import com.mob41.hkoweather.exception.InvaildReportException;
+
 public class WeatherReport {
+	
+	private final WeatherManager man;
 	
 	//Data from regional_weather_XXX.xml --START
 	private String stationcode = null;
@@ -52,11 +57,23 @@ public class WeatherReport {
 	/***
 	 * <h3>WeatherReport</h3>
 	 * <pre>public WeatherReport(String stationcode)</pre>
-	 * Create a new weather report.
-	 * @param stationcode - To classify this weather report to a specific Weather Station.
+	 * Create a new weather report.<br>
+	 * <br>
+	 * @param manager Specify a weather manager that exists
 	 */
-	public WeatherReport(String stationcode){
-		this.stationcode = stationcode;
+	public WeatherReport(WeatherManager manager){
+		this.man = manager;
+	}
+	
+	/***
+	 * <h3>updateThis</h3>
+	 * <pre>public void updateThis()</pre>
+	 * Forcing the weather manager of this report to update<br>
+	 * @throws InvaildReportException The report received was invalid.
+	 * @throws FetchWeatherException Could not fetch weather report.
+	 */
+	public void updateThis() throws FetchWeatherException, InvaildReportException{
+		man.fetchWeatherReport(this);
 	}
 	
 	/***
