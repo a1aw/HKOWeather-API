@@ -161,7 +161,9 @@ public class WeatherManager {
 	 * @throws InvaildReportException The report fetched was invalid.
 	 */
 	public WeatherReport fetchWeatherReport() throws FetchWeatherException, InvaildReportException{
-		return fetchWeatherReport(this.report);
+		WeatherReport report = fetchWeatherReport(this.report);
+		this.report = report;
+		return report;
 	}
 	
 	/***
