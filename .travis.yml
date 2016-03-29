@@ -2,10 +2,6 @@ language: java
 
 install: true
 
-matrix:
-  include:
-  - jdk: oraclejdk8
-
 before_deploy:
 - echo $projectversion
 - mvn package
