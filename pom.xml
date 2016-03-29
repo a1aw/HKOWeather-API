@@ -3,8 +3,32 @@
   <groupId>com.mob41.hkoweather.api</groupId>
   <artifactId>HKOWeather-API</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <name>HKOWeather-API</name>
   <description>An API for fetching weather from Hong Kong Observatory</description>
+  
+  <licenses>
+        <license>
+            <name>LGPL license, Version 3.0</name>
+            <url>https://www.gnu.org/licenses/lgpl.txt</url>
+        </license>
+    </licenses>
+    
+  <developers>
+        <developer>
+            <name>mob41</name>
+            <email>puihuenlaw@gmail.com</email>
+            <organization>mob41</organization>
+            <organizationUrl>https://mob41.github.io</organizationUrl>
+        </developer>
+    </developers>
+    
+   <scm>
+        <connection>scm:git:git@github.com:mob41/HKOWeather-API.git</connection>
+        <developerConnection>scm:git:git@github.com:mob41/HKOWeather-API.git</developerConnection>
+        <url>git@github.com:mob41/HKOWeather-API.git</url>
+    </scm>
+    
   <dependencies>
   	<dependency>
   		<groupId>org.json</groupId>

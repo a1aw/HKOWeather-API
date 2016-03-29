@@ -1,7 +1,11 @@
 # HKOWeather-API [![Build Status](https://travis-ci.org/mob41/HKOWeather-API.svg?branch=master)](https://travis-ci.org/mob41/HKOWeather-API)
 An API for fetching weather from Hong Kong Observatory.
+[Latest Release (No dependency control)](https://github.com/mob41/HKOWeather-API/releases/latest)
 
-[https://github.com/mob41/HKOWeather-API/releases/latest](https://github.com/mob41/HKOWeather-API/releases/latest)
+## Dependency
+The API depends on JSON. The old/deprecated API depends on ROME v1.0, JSoup v1.8.3, JDom v1.1.3
+
+If you clone/fork this project to your IDE, probably Maven will take care everything including dependency.
 ## Functions
 1. (Deprecated) Get HKO Weather Image, Temperature with just one function.
 2. Get temperature, humidity, wind speed, day 1-7 weather report, etc.
