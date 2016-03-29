@@ -51,21 +51,21 @@ public class WeatherReport {
 	//
 	/***
 	 * <h3>WeatherReport</h3>
-	 * <pre>protected WeatherReport(String stationcode)</pre>
+	 * <pre>public WeatherReport(String stationcode)</pre>
 	 * Create a new weather report.
 	 * @param stationcode - To classify this weather report to a specific Weather Station.
 	 */
-	protected WeatherReport(String stationcode){
+	public WeatherReport(String stationcode){
 		this.stationcode = stationcode;
 	}
 	
 	/***
 	 * <h3>setStationCode</h3>
-	 * <pre>protected void setStationCode(String stationcode)</pre>
+	 * <pre>public void setStationCode(String stationcode)</pre>
 	 * Set the weather station code of this report
 	 * @param stationcode - Weather Station Code. e.g. HKO, WTS..etc
 	 */
-	protected void setStationCode(String stationcode){
+	public void setStationCode(String stationcode){
 		this.stationcode = stationcode;
 	}
 	
@@ -81,11 +81,11 @@ public class WeatherReport {
 	
 	/***
 	 * <h3>setStationName_zh</h3>
-	 * <pre>protected void setStationName_zh(String name)</pre>
+	 * <pre>public void setStationName_zh(String name)</pre>
 	 * Set the weather station's Chinese name of this report
 	 * @param name - Weather Station's Chinese name.
 	 */
-	protected void setStationName_zh(String name){
+	public void setStationName_zh(String name){
 		this.stationNameZh = name;
 	}
 	
@@ -101,11 +101,11 @@ public class WeatherReport {
 	
 	/***
 	 * <h3>setStationName_en</h3>
-	 * <pre>protected void setStationName_en(String name)</pre>
+	 * <pre>public void setStationName_en(String name)</pre>
 	 * Set the weather station's English name of this report
 	 * @param name - Weather Station's English name.
 	 */
-	protected void setStationName_en(String name){
+	public void setStationName_en(String name){
 		this.stationNameEn = name;
 	}
 	
@@ -125,7 +125,7 @@ public class WeatherReport {
 	 * Set the update time of the weather of this report. (Provided by HKO)
 	 * @param time - Time described in String.
 	 */
-	protected void setUpdateTime(String time){
+	public void setUpdateTime(String time){
 		this.updateTime = time;
 	}
 	
@@ -141,11 +141,11 @@ public class WeatherReport {
 	
 	/***
 	 * <h3>setTemp</h3>
-	 * <pre>protected void setTemp(float temp)</pre>
+	 * <pre>public void setTemp(float temp)</pre>
 	 * Set the temperature of the weather of this report.
 	 * @param temp - Float number of the temperature.
 	 */
-	protected void setTemp(float temp){
+	public void setTemp(float temp){
 		this.temp = temp;
 	}
 	
@@ -161,11 +161,11 @@ public class WeatherReport {
 	
 	/***
 	 * <h3>setTempAround</h3>
-	 * <pre>protected void setTempAround(int temp)</pre>
+	 * <pre>public void setTempAround(int temp)</pre>
 	 * Set the temperature around (rounded) of the weather of this report.
 	 * @param temp Integer of the temperature around (rounded) 
 	 */
-	protected void setTempAround(int temp){
+	public void setTempAround(int temp){
 		this.temp_around = temp;
 	}
 	
@@ -181,11 +181,11 @@ public class WeatherReport {
 	
 	/***
 	 * <h3>setHumidity</h3>
-	 * <pre>protected void setHumidity(int humidity)</pre>
+	 * <pre>public void setHumidity(int humidity)</pre>
 	 * Set the humidity of the weather of this report.
 	 * @param humidity Humidity of the weather
 	 */
-	protected void setHumidity(int humidity){
+	public void setHumidity(int humidity){
 		this.humidity = humidity;
 	}
 	
@@ -204,115 +204,277 @@ public class WeatherReport {
 	 * <pre>setWindDirectionCode(String windDirectionCode)</pre>
 	 * @param windDirectionCode Wind Direction Code. e.g. NE / SE, etc...
 	 */
-	protected void setWindDirectionCode(String windDirectionCode){
+	public void setWindDirectionCode(String windDirectionCode){
 		this.windDirectionCode = windDirectionCode;
 	}
 	
-	//TODO Finish JavaDoc
+	/***
+	 * <h3>getWindDirectionCode</h3>
+	 * <pre>public String getWindDirectionCode()</pre>
+	 * Get the Wind Direction Code from this report.
+	 * @return Wind Direction Code.
+	 */
 	public String getWindDirectionCode(){
 		return this.windDirectionCode;
 	}
 	
-	protected void setWindDirection_en(String windDirection_en){
+	/***
+	 * <h3>setWindDirection_en</h3>
+	 * <pre>public void setWindDirection_en(String windDirection_en)</pre>
+	 * Set the Wind Direction in English to this report.
+	 * @param windDirection_en Wind Direction Description in English
+	 */
+	public void setWindDirection_en(String windDirection_en){
 		this.windDirectionEn = windDirection_en;
 	}
 	
+	/***
+	 * <h3>getWindDirectionInEn</h3>
+	 * <pre>public String getWindDirectionInEN()</pre>
+	 * Get the wind direction in English of this report.
+	 * @return Wind Direction Description in English
+	 */
 	public String getWindDirectionInEN(){
 		return this.windDirectionEn;
 	}
 	
-	protected void setWindDirection_en_shortform(String windDirection_en_shortform){
+	/***
+	 * <h3>setWindDirection_en_shortform</h3>
+	 * <pre>public void setWindDirection_en_shortform(String windDirection_en_shortform)</pre>
+	 * Set the short-form of the wind direction in English to this report.
+	 * @param windDirection_en_shortform Wind Direction Description Short-form
+	 */
+	public void setWindDirection_en_shortform(String windDirection_en_shortform){
 		this.windDirectionShortformEn = windDirection_en_shortform;
 	}
 	
+	/***
+	 * <h3>getWindDirectionShortformInEN()</h3>
+	 * <pre>public String getWindDirectionShortformInEN()</pre>
+	 * Get the short-form of the wind direction in English of this report
+	 * @return Wind Direction Description Short-form
+	 */
 	public String getWindDirectionShortformInEN(){
 		return this.windDirectionShortformEn;
 	}
 	
-	protected void setWindDirection_zh(String windDirection_zh){
+	/***
+	 * <h3>setWindDirection_zh</h3>
+	 * <pre>public void setWindDirection_zh(String windDirection_zh)</pre>
+	 * Set the Wind Direction Description in Chinese to this report
+	 * @param windDirection_zh Wind Direction Description in Chinese
+	 */
+	public void setWindDirection_zh(String windDirection_zh){
 		this.windDirectionZh = windDirection_zh;
 	}
 	
+	/***
+	 * <h3>getWindDirectionInZH</h3>
+	 * <pre>public String getWindDirectionInZH()</pre>
+	 * Get the Wind Direction Description in Chinese of this report
+	 * @return Wind Direction Description in Chinese
+	 */
 	public String getWindDirectionInZH(){
 		return this.windDirectionZh;
 	}
 	
-	protected void setWindDirection_zh_shortform(String windDirection_zh_shortform){
+	/***
+	 * <h3>setWindDirection_zh_shortform</h3>
+	 * <pre>public void setWindDirection_zh_shortform(String windDirection_zh_shortform)</pre>
+	 * Set the short-form of the wind direction in Chinese to this report.
+	 * @param windDirection_zh_shortform  Wind Direction Description Short-form
+	 */
+	public void setWindDirection_zh_shortform(String windDirection_zh_shortform){
 		this.windDirectionShortformZh = windDirection_zh_shortform;
 	}
 	
+	/***
+	 * <h3>getWindDirectionShortformInZH</h3>
+	 * <pre>public String getWindDirectionShortformInZH()</pre>
+	 * Get the short-form of the wind direction in Chinese of this report.
+	 * @return Wind Direction Description Short-form
+	 */
 	public String getWindDirectionShortformInZH(){
 		return this.windDirectionShortformZh;
 	}
 	
-	protected void setWindSpeed(float speedkm){
+	/***
+	 * <h3>setWindSpeed</h3>
+	 * <pre>public void setWindSpeed(float speedkm)</pre>
+	 * Set the wind speed record to this report.
+	 * @param speedkm Float number of wind speed
+	 */
+	public void setWindSpeed(float speedkm){
 		this.windSpeedKm = speedkm;
 	}
 	
+	/***
+	 * <h3>getWindSpeed</h3>
+	 * <pre>public float getWindSpeed()</pre>
+	 * Get the wind speed record of this report.<br><br>
+	 * <b>NOTE:</b> May return 0.0 if HKO reported NULL / NIL
+	 * @return Float number of wind speed
+	 */
 	public float getWindSpeed(){
 		return this.windSpeedKm;
 	}
 	
-	protected void setMeanSeaLevelPressure(float pressure){
+	/***
+	 * <h3>setMeanSeaLevelPressure</h3>
+	 * <pre>public void setMeanSeaLevelPressure(float pressure)</pre>
+	 * Set the mean sea level pressure.
+	 * @param pressure Float number of sea level pressure.
+	 */
+	public void setMeanSeaLevelPressure(float pressure){
 		this.MeanSeaLevelPressure = pressure;
 	}
 	
+	/***
+	 * <h3>getMeanSeaLevelPressure</h3>
+	 * <pre>public float getMeanSeaLevelPressure()</pre>
+	 * Get the mean sea level pressure.
+	 * @return Float number of sea level pressure.
+	 */
 	public float getMeanSeaLevelPressure(){
 		return this.MeanSeaLevelPressure;
 	}
 	
-	protected void setTenMinuteMeanVisibility(int visibility){
+	/***
+	 * <h3>setTenMinuteMeanVisibility</h3>
+	 * <pre>public void setTenMinuteMeanVisibility(int visibility)</pre>
+	 * Set the mean visibility from the weather station during ten minutes.
+	 * @param visibility Visibility
+	 */
+	public void setTenMinuteMeanVisibility(int visibility){
 		this.TenMinuteMeanVisibility = visibility;
 	}
 	
+	/***
+	 * <h3>getTenMinuteMeanVisibility</h3>
+	 * <pre>public void getTenMinuteMeanVisibility()</pre>
+	 * Get the mean visibility from the weather station during ten minutes.
+	 * @return Integer of Mean Visibility
+	 */
 	public int getTenMinuteMeanVisibility(){
 		return this.TenMinuteMeanVisibility;
 	}
 	
-	protected void setMaxTemp(float temp){
+	/***
+	 * <h3>setMaxTemp</h3>
+	 * <pre>public void setMaxTemp(float temp)</pre>
+	 * Set the maximum temperature record to this report.
+	 * @param temp Float number of maximum temperature
+	 */
+	public void setMaxTemp(float temp){
 		this.MaxTemperature = temp;
 	}
 	
+	/***
+	 * <h3>getMaxTemp</h3>
+	 * <pre>public void getMaxTemp()</pre>
+	 * Get the maximum temperature record of this report.
+	 * @return Float number of maximum temperature
+	 */
 	public float getMaxTemp(){
 		return this.MaxTemperature;
 	}
 	
-	protected void setMaxTempAround(int temp){
+	/***
+	 * <h3>setMaxTempAround</h3>
+	 * <pre>public void setMaxTempAround(int temp)</pre>
+	 * Similar to max. temperature, but it is rounded off.
+	 * @param temp Integer of Max. Temperature Around
+	 */
+	public void setMaxTempAround(int temp){
 		this.MaxTemperature_around = temp;
 	}
 	
+	/***
+	 * <h3>getMaxTempAround</h3>
+	 * <pre>public int getMaxTempAround()</pre>
+	 * Similar to max. temperature, but it is rounded off.
+	 * @return Integer of Max. Temperature Around
+	 */
 	public int getMaxTempAround(){
 		return this.MaxTemperature_around;
 	}
 	
-	protected void setMinTemp(float temp){
+	/***
+	 * <h3>setMinTemp</h3>
+	 * <pre>public void setMinTemp(float temp)</pre>
+	 * Set the minimum temperature record to this report.
+	 * @param temp Float number of minimum temperature
+	 */
+	public void setMinTemp(float temp){
 		this.MinTemperature = temp;
 	}
 	
+	/***
+	 * <h3>getMinTemp</h3>
+	 * <pre>public void getMinTemp()</pre>
+	 * Get the minimum temperature record of this report.
+	 * @return Float number of minimum temperature
+	 */
 	public float getMinTemp(){
 		return this.MinTemperature;
 	}
 	
-	protected void setMinTempAround(int temp){
+	/***
+	 * <h3>setMinTempAround</h3>
+	 * <pre>public void setMinTempAround(int temp)</pre>
+	 * Similar to min. temperature, but it is rounded off.
+	 * @param temp Integer of Min. Temperature Around
+	 */
+	public void setMinTempAround(int temp){
 		this.MinTemperature_around = temp;
 	}
 	
+	/***
+	 * <h3>getMinTempAround</h3>
+	 * <pre>public int getMinTempAround()</pre>
+	 * Similar to min. temperature, but it is rounded off.
+	 * @return Integer of Min. Temperature Around
+	 */
 	public int getMinTempAround(){
 		return this.MinTemperature_around;
 	}
 	
-	protected void setHomeMaxTemp(int temp){
+	/***
+	 * <h3>setHomeMaxTemp</h3>
+	 * <pre>public void setHomeMaxTemp(int temp)</pre>
+	 * Similar to max. temp, but it is estimated about the indoor temperature.
+	 * @param temp Integer of indoor max. temperature.
+	 */
+	public void setHomeMaxTemp(int temp){
 		this.HomeMaxTemperature = temp;
 	}
 	
+	/***
+	 * <h3>getHomeMaxTemp</h3>
+	 * <pre>public void setHomeMaxTemp()</pre>
+	 * Similar to max. temp, but it is estimated about the indoor temperature.
+	 * @return Integer of indoor max. temperature.
+	 */
 	public int getHomeMaxTemp(){
 		return this.HomeMaxTemperature;
 	}
 	
-	protected void setHomeMinTemp(int temp){
+	/***
+	 * <h3>setHomeMinTemp</h3>
+	 * <pre>public void setHomeMinTemp(int temp)</pre>
+	 * Similar to min. temp, but it is estimated about the indoor temperature.
+	 * @param temp Integer of indoor min. temperature.
+	 */
+	public void setHomeMinTemp(int temp){
 		this.HomeMinTemperature = temp;
 	}
 	
+	/***
+	 * <h3>getHomeMinTemp</h3>
+	 * <pre>public void setHomeMinTemp()</pre>
+	 * Similar to min. temp, but it is estimated about the indoor temperature.
+	 * @return Integer of indoor min. temperature.
+	 */
 	public int getHomeMinTemp(){
 		return this.HomeMinTemperature;
 	}
