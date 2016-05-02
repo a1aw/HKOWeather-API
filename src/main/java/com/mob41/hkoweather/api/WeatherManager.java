@@ -42,6 +42,8 @@ public class WeatherManager {
 	
 	private WeatherReport report;
 	
+	private JSONObject rawData = null;
+	
 	/***
 	 * <h3>WeatherManager</h3>
 	 * <pre>public WeatherManager() throws InvaildStationException</pre>
@@ -78,6 +80,14 @@ public class WeatherManager {
 			throw new InvaildStationException("The station code you specified was invalid.");
 		}
 		this.station = station;
+	}
+	
+	/**
+	 * Returns the raw data in JSON-format
+	 * @return JSONObject
+	 */
+	public JSONObject getRawJSON(){
+		return rawData;
 	}
 	
 	/***
@@ -204,31 +214,31 @@ public class WeatherManager {
 					}
 				}
 			}
-			JSONObject json = new JSONObject(sb.toString());
+			rawData = new JSONObject(sb.toString());
 			report = new WeatherReport(this);
-			report.setStationCode(json.getString("StationCode"));
-			report.setStationName_en(json.getString("StationNameEn"));
-			report.setStationName_zh(json.getString("StationNameZh"));
-			report.setUpdateTime(json.getString("BulletinTime"));
-			report.setTemp(Float.parseFloat(json.getString("Temperature")));
-			report.setTempAround(Integer.parseInt(json.getString("Temperature_AroundtoOdd")));
-			report.setHumidity(Integer.parseInt(json.getString("RH")));
-			report.setWindDirectionCode(json.getString("WindDirectionCode"));
-			report.setWindDirection_en(json.getString("WindDirectionEn"));
-			report.setWindDirection_en_shortform(json.getString("WindDirectionShortformEn"));
-			report.setWindDirection_zh(json.getString("WindDirectionZh"));
-			report.setWindDirection_zh_shortform(json.getString("WindDirectionShortformZh"));
-			if (!json.get("WindSpeedKm").equals(null)){
-				report.setWindSpeed(Float.parseFloat(json.getString("WindSpeedKm")));
+			report.setStationCode(rawData.getString("StationCode"));
+			report.setStationName_en(rawData.getString("StationNameEn"));
+			report.setStationName_zh(rawData.getString("StationNameZh"));
+			report.setUpdateTime(rawData.getString("BulletinTime"));
+			report.setTemp(Float.parseFloat(rawData.getString("Temperature")));
+			report.setTempAround(Integer.parseInt(rawData.getString("Temperature_AroundtoOdd")));
+			report.setHumidity(Integer.parseInt(rawData.getString("RH")));
+			report.setWindDirectionCode(rawData.getString("WindDirectionCode"));
+			report.setWindDirection_en(rawData.getString("WindDirectionEn"));
+			report.setWindDirection_en_shortform(rawData.getString("WindDirectionShortformEn"));
+			report.setWindDirection_zh(rawData.getString("WindDirectionZh"));
+			report.setWindDirection_zh_shortform(rawData.getString("WindDirectionShortformZh"));
+			if (!rawData.get("WindSpeedKm").equals(null)){
+				report.setWindSpeed(Float.parseFloat(rawData.getString("WindSpeedKm")));
 			}
-			report.setMeanSeaLevelPressure(Float.parseFloat(json.getString("MeanSeaLevelPressure")));
-			report.setTenMinuteMeanVisibility(Integer.parseInt(json.getString("TenMinuteMeanVisibility")));
-			report.setMaxTemp(Float.parseFloat(json.getString("MaxTemperature")));
-			report.setMaxTempAround(Integer.parseInt(json.getString("MaxTemperature_AroundtoOdd")));
-			report.setMinTemp(Float.parseFloat(json.getString("MinTemperature")));
-			report.setMinTempAround(Integer.parseInt(json.getString("MinTemperature_AroundtoOdd")));
-			report.setHomeMaxTemp(Integer.parseInt(json.getString("HomeMaxTemperature")));
-			report.setHomeMinTemp(Integer.parseInt(json.getString("HomeMinTemperature")));
+			report.setMeanSeaLevelPressure(Float.parseFloat(rawData.getString("MeanSeaLevelPressure")));
+			report.setTenMinuteMeanVisibility(Integer.parseInt(rawData.getString("TenMinuteMeanVisibility")));
+			report.setMaxTemp(Float.parseFloat(rawData.getString("MaxTemperature")));
+			report.setMaxTempAround(Integer.parseInt(rawData.getString("MaxTemperature_AroundtoOdd")));
+			report.setMinTemp(Float.parseFloat(rawData.getString("MinTemperature")));
+			report.setMinTempAround(Integer.parseInt(rawData.getString("MinTemperature_AroundtoOdd")));
+			report.setHomeMaxTemp(Integer.parseInt(rawData.getString("HomeMaxTemperature")));
+			report.setHomeMinTemp(Integer.parseInt(rawData.getString("HomeMinTemperature")));
 			return report;
 		} catch (MalformedURLException e1) {
 			e1.printStackTrace();
