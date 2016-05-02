@@ -1,4 +1,3 @@
-com.mob41.hkoweather.api
-com.mob41.hkoweather.exception
-com.mob41.hkoweather.tests
-com.mob41.hkoweather.thread
+com.mob41.kmbeta.api
+com.mob41.kmbeta.api.tests
+com.mob41.kmbeta.exception
